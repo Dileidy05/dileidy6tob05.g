@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Definición de metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi pagina</title>
+    <!-- Importación de la fuente de Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: 'Montserrat', Sans-Serif; /* Fuente principal */
+            background-color: #181818; /* Color de fondo */
+            color: #fff; /* Color de texto */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para el encabezado */
+        header {
+            background-color: #222; /* Color de fondo del encabezado */
+            color: #fff; /* Color de texto del encabezado */
+            padding: 20px; /* Espaciado interno del encabezado */
+            text-align: center; /* Alineación del texto al centro */
+        }
+
+        /* Estilos para el contenido principal */
+        .container {
+            text-align: center; /* Alineación del texto al centro */
+            margin: 50px auto; /* Margen superior e inferior automático, y margen horizontal centralizado */
+            max-width: 600px; /* Ancho máximo del contenedor */
+        }
+
+        /* Estilos para los títulos */
+        h1 {
+            font-size: 2.5rem; /* Tamaño de la fuente del título */
+            margin-bottom: 30px; /* Margen inferior del título */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+        }
+
+        /* Estilos para los botones */
+        button {
+            background-color: #4CAF50; /* Color de fondo del botón */
+            color: white; /* Color de texto del botón */
+            padding: 15px 20px; /* Espaciado interno del botón */
+            border: none; /* Sin borde */
+            cursor: pointer; /* Cambio de cursor al pasar sobre el botón */
+            margin: 10px; /* Margen entre botones */
+            border-radius: 5px; /* Radio de borde del botón */
+            font-size: 1.1rem; /* Tamaño de la fuente del botón */
+            transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+        }
+
+        /* Estilos para el botón cuando el mouse está sobre él */
+        button:hover {
+            background-color: #45a049; /* Nuevo color de fondo al pasar el mouse sobre el botón */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Efecto de sombra al pasar el mouse */
+        }
+
+        /* Estilos para el contenedor de la imagen del logo */
+        #logoContainer {
+            text-align: center; /* Alineación del texto al centro */
+            margin-top: 40px; /* Margen superior del contenedor de la imagen */
+        }
+
+        /* Estilos para la imagen del logo */
+        #logoContainer img {
+            max-width: 500px; /* Ancho máximo de la imagen del logo */
+            border-radius: 10px; /* Radio de borde de la imagen del logo */
+            transition: box-shadow 0.3s ease; /* Transición suave del efecto de sombra */
+        }
+
+        /* Estilos para la imagen del logo cuando el mouse está sobre ella */
+        #logoContainer img:hover {
+            box-shadow: 0 40px 50px rgba(255, 255, 255, 0.5); /* Efecto de sombra al pasar el mouse */
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #222; /* Color de fondo del pie de página */
+            color: #fff; /* Color de texto del pie de página */
+            padding: 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación del texto al centro */
+            position: fixed; /* Fijar el pie de página en la parte inferior */
+            bottom: 0; /* Posición en la parte inferior */
+            width: 100%; /* Ancho completo */
+        }
+
+        /* Estilos para ocultar elementos */
+        .hidden {
+            display: none; /* Ocultar elementos */
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Bienvenidos a mi página</h1>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <!-- Botón para mostrar/ocultar el logo -->
+        <button id="mostrarOcultarLogo">Mi logo</button>
+        <!-- Botón para enlaces -->
+        <a href="Enlaces.html"><button>Enlaces</button></a>
+    </div>
+
+    <!-- Contenedor de la imagen del logo (inicialmente oculto) -->
+    <div id="logoContainer" class="hidden">
+        <img src="dileydi.jpg" alt="Logo">
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>¡Gracias por visitar mi página!</p>
+    </footer>
+
+    <!-- Script para controlar la visibilidad del logo -->
+    <script>
+        document.getElementById("mostrarOcultarLogo").addEventListener("click", function() {
+            var logoContainer = document.getElementById("logoContainer");
+            logoContainer.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>
